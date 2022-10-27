@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiCRUD.Pages.VideoGameDetailPage"
+             Title="Update or Delete Item">
+    <ContentPage.Content>
+        <StackLayout Margin="15" 
+                     VerticalOptions="StartAndExpand">
+            <Label FontSize="Large" Text="Update and Delete"  ></Label>
+
+            <Label Text="Name:" />
+            <Entry Text="{Binding Name}" />
+            <Label Text="Price:" />
+            <Entry Text="{Binding Price}" />
+            <Label Text="Is Available" />
+            <Switch IsToggled="{Binding isAvailable}" ThumbColor="Blue" />
+
+            <Button Text="Save Item" Margin="15" Clicked="SaveButton_Clicked" />
+            <Button Text="Delete Item" Margin="15" Clicked="DeleteButton_Clicked" />
+            <Button Text="Cancel" Margin="15" Clicked="CancelButton_Clicked" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
